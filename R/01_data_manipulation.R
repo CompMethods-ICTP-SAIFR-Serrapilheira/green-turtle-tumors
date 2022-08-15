@@ -32,6 +32,8 @@ write.csv(green_turtle,
           "data/processed/01_no_recap_green_turtle.csv",
           row.names = FALSE)
 
+# Checking if each row is one individual
+length(green_turtle$id_turtle) == length(unique(green_turtle$id_turtle))
 
 # Assigning variables -----------------------------------------------------
 
