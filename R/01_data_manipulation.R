@@ -35,21 +35,26 @@ write.csv(green_turtle,
 # Checking if each row is one individual
 length(green_turtle$id_turtle) == length(unique(green_turtle$id_turtle))
 
-# Assigning variables -----------------------------------------------------
+# Checking and changing variables types -----------------------------------------------------
+str(green_turtle)
 
-# CCL stands for Curvilinear Carapace Length and is a indicative of
-# developmental stage in sea turtles
-CCL <- green_turtle$CCL 
+# Curvilinear Carapace Length (CCL) is measured in centimeters and it is used to
+# infer developmental stage in sea turtles
+str(green_turtle$CCL)
 
 # Body condition is measured as the apparent nutritional condition 
 # classified as: good, regular or poor
-body_condition <- as.factor(green_turtle$body_score)
-levels(body_condition) <- c("good", "regular", "poor")
+str(green_turtle$body_condition)
+
+green_turtle$body_condition <- as.factor(green_turtle$body_condition)
+levels(green_turtle$body_condition) <- c("good", "regular", "poor")
 
 # Presence (1) or absence (0) of tumors
-tumor <- as.factor(green_turtle$tumors)
+str(green_turtle$tumors)
 
-# Tumor index calculated based on the size and number of tumors. 
-# It was not measured for all individuals
-tumor_index <- green_turtle$tumor_index
+green_turtle$tumors <- as.factor(green_turtle$tumors)
+
+# Tumor Index is calculated based on the number and size of tumors. It is used
+# as measurement of how much the individual is affected by the disease. 
+str(green_turtle$tumor_index)
 
