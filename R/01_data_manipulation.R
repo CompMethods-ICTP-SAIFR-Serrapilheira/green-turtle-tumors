@@ -26,12 +26,6 @@ green_turtle <- read.csv("./Data/Raw/green_turtle_pr_cmr.csv", sep = ";")
 
 green_turtle <- green_turtle %>% filter(capture_recapture == "capture")
 
-# Exporting the modified table
-if (dir.exists("data/processed")) dir.create("data/processed")
-write.csv(green_turtle,
-          "data/processed/01_no_recap_green_turtle.csv",
-          row.names = FALSE)
-
 # Checking if each row is one individual
 length(green_turtle$id_turtle) == length(unique(green_turtle$id_turtle))
 
@@ -64,3 +58,10 @@ green_turtle <- green_turtle %>% mutate(tumor_severity = cut(tumor_index,
                                              breaks = c(0,40,120,+Inf),
                                              labels = c("mild", "moderate","severe")))
 
+
+# Exporting the modified table --------------------------------------------
+
+if (dir.exists("data/processed")) dir.create("data/processed")
+write.csv(green_turtle,
+          "data/processed/01_no_recap_green_turtle.csv",
+          row.names = FALSE)
