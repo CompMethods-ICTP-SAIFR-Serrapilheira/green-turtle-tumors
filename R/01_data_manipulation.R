@@ -61,5 +61,5 @@ str(green_turtle$tumor_index)
 # 40 =< moderate =<120 and 120 < severe
 
 green_turtle <- green_turtle %>% mutate(tumor_severity = cut(tumor_index,
-                                             breaks = c(-Inf,40,120,+Inf),
+                                             breaks = c(0,40,120,+Inf),
                                              labels = c("mild", "moderate","severe")))
