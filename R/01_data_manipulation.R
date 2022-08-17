@@ -5,7 +5,7 @@
 # 
 # Data source: Laboratório de Ecologia e Conservação - UFPR
 # 
-# Description: the script allows to load the data, manipulate and assign the
+# Description: the script allows to load the data, manipulate the
 # main variables
 
 
@@ -35,13 +35,6 @@ str(green_turtle)
 # Curvilinear Carapace Length (CCL) is measured in centimeters and it is used to
 # infer developmental stage in sea turtles
 str(green_turtle$CCL)
-
-# Body condition is measured as the apparent nutritional condition 
-# classified as: good, regular or poor
-str(green_turtle$body_condition)
-
-green_turtle$body_condition <- as.factor(green_turtle$body_condition)
-levels(green_turtle$body_condition) <- c("good", "regular", "poor")
 
 # Presence (1) or absence (0) of tumors
 str(green_turtle$tumors)
