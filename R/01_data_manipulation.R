@@ -54,7 +54,12 @@ str(green_turtle$tumors)
 
 green_turtle$tumors <- as.factor(green_turtle$tumors)
 
-# Tumor Index is calculated based on the number and size of tumors. It is used
-# as measurement of how much the individual is affected by the disease. 
+# Tumor Index is calculated based on the number and size of tumors.
 str(green_turtle$tumor_index)
 
+# It can be used to classify the severity of the disease as: mild < 40, 
+# 40 =< moderate =<120 and 120 < severe
+
+green_turtle <- green_turtle %>% mutate(tumor_severity = cut(tumor_index,
+                                             breaks = c(-Inf,40,120,+Inf),
+                                             labels = c("mild", "moderate","severe")))
