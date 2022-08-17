@@ -40,6 +40,9 @@ str(green_turtle$CCL)
 str(green_turtle$tumors)
 
 green_turtle$tumors <- as.factor(green_turtle$tumors)
+green_turtle <- green_turtle %>% mutate(tumor_chr = recode(tumors,
+                                                           "0" = "Non-afflicted",
+                                                           "1" = "Afflicted"))
 
 # Tumor Index is calculated based on the number and size of tumors.
 str(green_turtle$tumor_index)
