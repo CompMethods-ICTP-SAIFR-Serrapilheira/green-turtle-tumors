@@ -1,10 +1,9 @@
-<div align="center">
-## Tumor Occurrence in Juvenile Green Turtles </br>(_Chelonia mydas_) in Southern Brazil
+## Tumor Occurrence in Juvenile Green Turtles (_Chelonia mydas_) </br> in Southern Brazil
 
 
 **Author: Tawane Yara Nunes**  
 
-</div>
+
 #### Background
 
 The green turtle, _Chelonia mydas_, is one of the seven recognized species of sea turtles and is globally classified as endangered. During their life cycle, green turtles are exposed to multiple threats such as pollution, fisheries bycatch, habitat destruction, and the occurrence of diseases. Fibropapilomatosis is a virus-born neoplastic disease most common in green turtles, especially juveniles. Tumor formation by fibropapilomatosis can compromise turtles' locomotion, food ingestion, vision, and reproduction. Investigating this disease is considered a research priority by specialists working in sea turtle biology and conservation.   
