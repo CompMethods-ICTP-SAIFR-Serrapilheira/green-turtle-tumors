@@ -1,4 +1,4 @@
-"id_capture","id_turtle","capture_recapture","flipper_tag_1","flipper_tag_2","specie","date","campaing","season","site","area","capture_time","body_score","weight_kg","CCL","tumors","tumor_index"
+"id_capture","id_turtle","capture_recapture","flipper_tag_1","flipper_tag_2","specie","date","campaing","season","site","area","capture_time","body_condition","weight_kg","CCL","tumors","tumor_index"
 1099,1099,"capture","BR87001","BR87002","Chelonia mydas","27/04/2014","I","autumn","Ilha do mel",6,NA,"good","4.1",32.4,0,NA
 1100,1100,"capture","BR87003","BR87004","Chelonia mydas","28/04/2014","I","autumn","Ilha do mel",6,NA,"good","5.7",39.8,0,NA
 1101,1101,"capture","BR87005","BR87006","Chelonia mydas","29/04/2014","I","autumn","Ilha das Cobras",1,NA,"good","6.4",38.7,0,NA
