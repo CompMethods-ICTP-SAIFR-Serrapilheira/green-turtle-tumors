@@ -10,7 +10,7 @@ The green turtle, _Chelonia mydas_, is one of the seven recognized species of se
 
 #### Goals 
 
-This project aims to explore the occurrence of fibropapilomatosis tumors (hereafter tumors) in juvenile green turtles in a foraging ground in Parana State, Southern Brazil.
+This project aims to: (i) explore the occurrence of fibropapilomatosis tumors (hereafter tumors) and (ii) test if there is difference in the developmental stage between juvenile green turtles afflicted and non-afflicted by tumors, in a foraging ground in Parana State, Southern Brazil.
 
 #### Dataset
 
