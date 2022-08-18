@@ -37,14 +37,23 @@ green_turtle %>% summarise(obs=n()-sum(is.na(CCL)),
                            sd = sd(CCL, na.rm = T))
 
 # Plotting the size distribution 
- 
-CCL_histo <- ggplot(green_turtle, aes(x = CCL))+
+
+if (!dir.exists("figures")) dir.create("figures")
+png("figures/01_CCL_histogram.png", 10, 8, units = "cm", res = 100)
+
+ggplot(green_turtle, aes(x = CCL))+
  geom_histogram(binwidth = 2, colour = "gray62",fill="seagreen2")+
  labs(x = "Curvilinear Carapace Length (cm)", y = "Number of individuals")+
- theme_classic()+
+ theme(panel.background = element_rect(fill = "White"),
+       legend.position ="none", 
+       axis.line = element_line(color = "black"),
+       text= element_text(size=10), 
+       axis.text = element_text(size=10, colour="black"))+
  scale_x_continuous(limits=c(25,60), breaks = c(25,30,35,40,45,50,55,60))+
  scale_y_continuous(limits=c(0,25), breaks = c(0,5,10,15,20,25))
 
+
+dev.off()
 
 # Occurrence  of tumors ---------------------------------------------------
 

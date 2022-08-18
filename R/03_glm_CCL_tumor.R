@@ -39,6 +39,8 @@ AICctab(mod_null,mod_tumor,  base = T, weights = T)
 anova(mod_tumor, test = "F")
 
 # Visualizing the results 
+if (!dir.exists("figures")) dir.create("figures")
+png("figures/02_CCL_vs_tumor.png", 10, 8, units = "cm", res = 150)
 
 ggplot(green_turtle, aes(x = tumor_chr, y = CCL, fill = tumor_chr))+
  geom_boxplot(color = "gray30")+
@@ -52,5 +54,5 @@ ggplot(green_turtle, aes(x = tumor_chr, y = CCL, fill = tumor_chr))+
   axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)))+
  scale_fill_manual(values=c("seagreen2","gold2"))
 
-
+dev.off()
 
