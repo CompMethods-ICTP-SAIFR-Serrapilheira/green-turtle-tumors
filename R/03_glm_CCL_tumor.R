@@ -14,13 +14,12 @@
 # Packages ----------------------------------------------------------------
 
 library(ggplot2)
-library(lsmeans)
 library(bbmle)
 
 # CCL X tumor occurrence -----
 
 # Comparing the mean CCL between turtles with and without tumor
-green_turtle %>% group_by(tumors) %>% 
+green_turtle %>% group_by(tumor_chr) %>% 
  summarise(obs=n()-sum(is.na(CCL)),
            min = min(CCL),
            max = max(CCL),
@@ -31,22 +30,27 @@ green_turtle %>% group_by(tumors) %>%
 
 # Testing for difference in mean CCL between turtles with and without tumor
 mod_null <- glm(CCL ~ 0, family = gaussian, green_turtle) # Null model
-mod_tumor <- glm(CCL ~ tumors, family = gaussian, green_turtle)
+mod_tumor <- glm(CCL ~ tumor_chr, family = gaussian, green_turtle)
 
 # Comparing the models
-AICctab(mod_null,mod_tumor,  base = T, weights = T)
+# Selecting the model based on the Akaike Information Criterion
 summary(mod_tumor)
+AICctab(mod_null,mod_tumor,  base = T, weights = T) 
 anova(mod_tumor, test = "F")
 
-lsmeans(mod_tumor, specs = pairwise ~ tumors, adjust = "Tukey")
+# Visualizing the results 
 
-# Plotting 
-
-ggplot(green_turtle, aes(x = CCL, y = tumors))+
- geom_boxplot()+
- theme_classic()
-
-
+ggplot(green_turtle, aes(x = tumor_chr, y = CCL, fill = tumor_chr))+
+ geom_boxplot(color = "gray30")+
+ labs(x = "Tumors", y = "Curvilinear Carapace Length")+
+ theme(panel.background = element_rect(fill = "White"),
+       legend.position ="none", 
+       axis.line = element_line(color = "black"),
+       text= element_text(size=10), 
+  axis.text = element_text(size=10, colour="black"),
+  axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0)),
+  axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)))+
+ scale_fill_manual(values=c("seagreen2","gold2"))
 
 
 
