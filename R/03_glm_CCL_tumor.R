@@ -15,6 +15,7 @@
 
 library(ggplot2)
 library(bbmle)
+library(viridis)
 
 # CCL X tumor occurrence -----
 
@@ -40,10 +41,13 @@ anova(mod_tumor, test = "F")
 
 # Visualizing the results 
 if (!dir.exists("figures")) dir.create("figures")
-png("figures/02_CCL_vs_tumor.png", 10, 8, units = "cm", res = 150)
+png("figures/02_CCL_vs_tumor.png", 15, 8, units = "cm", res = 150)
 
 ggplot(green_turtle, aes(x = tumor_chr, y = CCL, fill = tumor_chr))+
- geom_boxplot(color = "gray30")+
+ geom_boxplot(alpha=0.6)+
+ geom_jitter(color="black", size=0.4) +
+ scale_fill_manual(values=c("#69b3a2", "#404080"))+
+ #scale_fill_viridis(discrete=TRUE, alpha=0.6, option = "E") +
  labs(x = "Tumors", y = "Curvilinear Carapace Length")+
  theme(panel.background = element_rect(fill = "White"),
        legend.position ="none", 
@@ -52,7 +56,7 @@ ggplot(green_turtle, aes(x = tumor_chr, y = CCL, fill = tumor_chr))+
   axis.text = element_text(size=10, colour="black"),
   axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0)),
   axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)))+
- scale_fill_manual(values=c("seagreen2","gold2"))
-
+ coord_flip()
+ 
 dev.off()
 

@@ -39,10 +39,10 @@ green_turtle %>% summarise(obs=n()-sum(is.na(CCL)),
 # Plotting the size distribution 
 
 if (!dir.exists("figures")) dir.create("figures")
-png("figures/01_CCL_histogram.png", 10, 8, units = "cm", res = 100)
+png("figures/01_CCL_histogram.png", 15, 8, units = "cm", res = 100)
 
 ggplot(green_turtle, aes(x = CCL))+
- geom_histogram(binwidth = 2, colour = "gray62",fill="seagreen2")+
+ geom_histogram(binwidth = 2, color="#69b3a2",fill= "#69b3a2", alpha=0.7)+
  labs(x = "Curvilinear Carapace Length (cm)", y = "Number of individuals")+
  theme(panel.background = element_rect(fill = "White"),
        legend.position ="none", 
