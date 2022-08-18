@@ -78,3 +78,11 @@ index_tumor %>% summarise(obs=n()-sum(is.na(tumor_index)),
 
 # how is the severity of the disease in the population?
 summary(green_turtle$tumor_severity)
+
+# proportions of severity classes
+# mild
+round((41/55)*100)
+#moderate
+round((6/55)*100)
+#severe
+round((8/55)*100)
