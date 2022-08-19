@@ -25,13 +25,16 @@ tumors, in a foraging ground in Parana State, Southern Brazil.
 
 #### Methods
 
-To achieve this project goals, a dataset from a capture-mark-recapture
-study led by the Laboratório de Ecologia e Consevação - UFPR was used.
-The sea turtles were intentionally captured using well-established
-techniques \[5\] on the Parana State coast, Southern Brazil (25°29’09”S
-48°24’28”W). After being captured, the green turtles were evaluated by a
-veterinarian for tumor affliction. Also, the curvilinear carapace length
-(CCL) was measured (cm) with a flexible tape.
+To achieve this project goals, a dataset from a green turtle
+capture-mark-recapture study from 2014 to 2019 led by the Laboratório de
+Ecologia e Consevação - UFPR was used. All activities were under the
+Brazilian Scientific Permit from the Ministry of the Environment SISBIO
+74581-6.The sea turtles were intentionally captured using
+well-established techniques \[5\] on the Parana State coast, Southern
+Brazil (25°29’09”S 48°24’28”W). After being captured, the green turtles
+were evaluated by a veterinarian for tumor affliction. Also, the
+curvilinear carapace length (CCL) was measured (cm) with a flexible
+tape.
 
 For the turtles afflicted by tumors, the tumor index was calculated
 which takes into account the number and size of the tumors and indicates
