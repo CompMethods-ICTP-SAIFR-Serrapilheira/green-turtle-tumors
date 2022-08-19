@@ -15,7 +15,6 @@
 
 library(ggplot2)
 library(bbmle)
-library(viridis)
 
 # CCL X tumor occurrence -----
 
@@ -47,7 +46,6 @@ ggplot(green_turtle, aes(x = tumor_chr, y = CCL, fill = tumor_chr))+
  geom_boxplot(alpha=0.6)+
  geom_jitter(color="black", size=0.4) +
  scale_fill_manual(values=c("#69b3a2", "#404080"))+
- #scale_fill_viridis(discrete=TRUE, alpha=0.6, option = "E") +
  labs(x = "Tumors", y = "Curvilinear Carapace Length")+
  theme(panel.background = element_rect(fill = "White"),
        legend.position ="none", 
