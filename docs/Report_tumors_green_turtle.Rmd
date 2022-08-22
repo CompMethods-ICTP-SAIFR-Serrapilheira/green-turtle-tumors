@@ -20,7 +20,7 @@ This project aims to: (i) explore the occurrence of fibropapilomatosis tumors (h
 
 To achieve this project goals, a dataset from a green turtle capture-mark-recapture study from 2014 to 2019 led by the Laboratório de Ecologia e Consevação - UFPR was used. All activities were under the Brazilian Scientific Permit from the Ministry of the Environment  SISBIO 74581-6.The sea turtles were intentionally captured using well-established techniques @Nunes2021 on the Parana State coast, Southern Brazil (25°29'09"S 48°24'28"W). After being captured, the green turtles were evaluated by a veterinarian for tumor affliction. Also, the curvilinear carapace length (CCL) was measured (cm) with a flexible tape. 
 
-For the turtles afflicted by tumors, the tumor index was calculated which takes into account the number and size of the tumors and indicates the disease severity @Rossi2016. The occurrence of tumors was explored by the percentage of individuals afflicted by the disease. Descriptive statistics for  CCL and tumor index. Variability in CCL regarding tumor affliction was assessed using a generalized linear model.
+For the turtles afflicted by tumors, the tumor index was calculated which takes into account the number and size of the tumors and indicates the disease severity @Rossi2016. The occurrence of tumors was explored by the percentage of individuals afflicted by the disease. Descriptive statistics for  CCL and tumor index. Variability in CCL regarding tumor affliction was assessed using a generalized linear model (glm). This model was compared to a null glm based on the Akaike Information Criterion.
 
 #### Results
 
